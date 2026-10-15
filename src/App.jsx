@@ -42,9 +42,10 @@ const contacts = [
 ];
 
 export default function App() {
-const [showContacts, setShowContacts] = useState(
-  new URLSearchParams(window.location.search).get("contact") === "1"
-);
+  const [showContacts, setShowContacts] = useState(
+    new URLSearchParams(window.location.search).get("contact") === "1"
+  );
+
   return (
     <main className="page-shell">
       <div className="leaf leaf-one" aria-hidden="true" />
@@ -59,17 +60,13 @@ const [showContacts, setShowContacts] = useState(
               className="brand-logo"
             />
           </div>
-
           <p className="eyebrow">
             QUALITY · TRUST · CRAFTSMANSHIP
           </p>
-
           <h1>GUMTREE</h1>
-
           <p className="brand-subtitle">
             <span />PLYWOOD<span />
           </p>
-
           <p className="hero-copy">
             Quality products. Trusted relationships.
           </p>
@@ -80,12 +77,10 @@ const [showContacts, setShowContacts] = useState(
             <span className="product-mark">▤</span>
             <span>PLYWOOD</span>
           </div>
-
           <div className="product-tile">
             <span className="product-mark">▥</span>
             <span>BLOCKBOARD</span>
           </div>
-
           <div className="product-tile">
             <span className="product-mark">▱</span>
             <span>FLUSH DOOR</span>
@@ -93,32 +88,21 @@ const [showContacts, setShowContacts] = useState(
         </section>
 
         {!showContacts ? (
-          
-<section className="qr-section">
-  <h2>Scan & Connect</h2>
-
-  <p>
-    Scan this QR code to connect with Gumtree Plywood
-  </p>
-
-  <div className="qr-box">
-    <QRCodeSVG
-      value={`${window.location.origin}/?contact=1`}
-      size={210}
-      level="H"
-      includeMargin={true}
-    />
-  </div>
-
-  <strong>GUMTREE PLYWOOD</strong>
-  <span>Scan me to connect with us</span>
-</section>
-
-
+          <section className="qr-section">
+            <h2>Scan & Connect</h2>
+            <p>
+              Scan this QR code to connect with Gumtree Plywood
+            </p>
+            <div className="qr-box">
+              <QRCodeSVG
+                value={`${window.location.origin}/?contact=1`}
+                size={210}
+                level="H"
+                includeMargin={true}
+              />
+            </div>
             <strong>GUMTREE PLYWOOD</strong>
             <span>Scan me to connect with us</span>
-
-           
           </section>
         ) : (
           <section className="contact-section">
@@ -132,7 +116,6 @@ const [showContacts, setShowContacts] = useState(
             </button>
 
             <h2>Let’s connect</h2>
-
             <p className="intro">
               For product details, orders and business enquiries,
               reach us here.
@@ -153,17 +136,13 @@ const [showContacts, setShowContacts] = useState(
                       : "noreferrer"
                   }
                 >
-                  <span
-                    className={`contact-icon ${contact.className}`}
-                  >
+                  <span className={`contact-icon ${contact.className}`}>
                     {contact.icon}
                   </span>
-
                   <span className="contact-text">
                     <strong>{contact.title}</strong>
                     <small>{contact.subtitle}</small>
                   </span>
-
                   <ArrowUpRight className="arrow" size={21} />
                 </a>
               ))}
@@ -173,13 +152,10 @@ const [showContacts, setShowContacts] = useState(
 
         <footer className="footer">
           <div className="footer-line" />
-
           <p className="footer-brand">GUMTREE PLYWOOD</p>
-
           <p className="footer-slogan">
             Let’s Build a Better Tomorrow
           </p>
-
           <p className="footer-products">
             Plywood <span>•</span> Blockboard <span>•</span> Flush Door
           </p>
