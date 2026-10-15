@@ -42,8 +42,9 @@ const contacts = [
 ];
 
 export default function App() {
-  const [showContacts, setShowContacts] = useState(false);
-
+const [showContacts, setShowContacts] = useState(
+  new URLSearchParams(window.location.search).get("contact") === "1"
+);
   return (
     <main className="page-shell">
       <div className="leaf leaf-one" aria-hidden="true" />
@@ -101,10 +102,14 @@ export default function App() {
 
             <div className="qr-box">
               <QRCodeSVG
-                value={window.location.origin}
-                size={210}
-                level="H"
-                includeMargin={true}
+                
+          <QRCodeSVG
+          value={`${window.location.origin}/?contact=1`}
+          size={210}
+          level="H"
+          includeMargin={true}
+              />
+
               />
             </div>
 
