@@ -93,25 +93,27 @@ const [showContacts, setShowContacts] = useState(
         </section>
 
         {!showContacts ? (
-          <section className="qr-section">
-            <h2>Scan & Connect</h2>
+          
+<section className="qr-section">
+  <h2>Scan & Connect</h2>
 
-            <p>
-              Scan this QR code to connect with Gumtree Plywood
-            </p>
+  <p>
+    Scan this QR code to connect with Gumtree Plywood
+  </p>
 
-            <div className="qr-box">
-              <QRCodeSVG
-                
-          <QRCodeSVG
-          value={`${window.location.origin}/?contact=1`}
-          size={210}
-          level="H"
-          includeMargin={true}
-              />
+  <div className="qr-box">
+    <QRCodeSVG
+      value={`${window.location.origin}/?contact=1`}
+      size={210}
+      level="H"
+      includeMargin={true}
+    />
+  </div>
 
-              />
-            </div>
+  <strong>GUMTREE PLYWOOD</strong>
+  <span>Scan me to connect with us</span>
+</section>
+
 
             <strong>GUMTREE PLYWOOD</strong>
             <span>Scan me to connect with us</span>
